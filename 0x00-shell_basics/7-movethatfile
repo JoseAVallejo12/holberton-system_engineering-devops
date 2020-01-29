@@ -1,2 +1,2 @@
 #!/bin/dash
-mv betty holbarton
+mv /tmp/betty /tmp/holberton
