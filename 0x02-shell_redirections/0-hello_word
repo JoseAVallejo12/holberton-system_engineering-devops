@@ -1,2 +1,2 @@
 #!/bin/bash
-eco "Hello, Word"
+echo -e "Hello, Word\n"
