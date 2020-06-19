@@ -3,6 +3,6 @@
 for file in "$PWD"/*
 do
 	str=$(basename "$file")
-	echo ${str#*-}
+	echo "${str#*-}"
 done
 
