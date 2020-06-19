@@ -1,6 +1,6 @@
 # 0x04 l0ops, conditions and parsing
 ## Resources
-***### Read or watch:
+### Read or watch
 - [Loops sample](https://intranet.hbtn.io/rltoken/fRCmr2B_Ne-rQdFZdfUDcA)
 - [Variable assignment and arithmetic](https://intranet.hbtn.io/rltoken/o8mucWW2XddN4MHiHSArkA)
 - [Comparison operators](https://intranet.hbtn.io/rltoken/jN0bfG-Qpkg3aYJM-n3LHw)
