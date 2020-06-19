@@ -4,8 +4,7 @@ filename=holbertonschool
 if [ -e "$filename" ]
 then
 	echo "holbertonschool file exists"
-	a=$(less "$filename" | wc -l)
-	if ((a > 0))
+	if [ -s "$filename" ]
 	then
 		echo "holbertonschool file is not empty"
 	else
@@ -14,6 +13,8 @@ then
 	if [ -f "$filename" ]
 	then
 		echo "holbertonschool is a regular file"
+	else
+		echo ""
 	fi
 else
 	echo "holbertonschool file does not exist"
