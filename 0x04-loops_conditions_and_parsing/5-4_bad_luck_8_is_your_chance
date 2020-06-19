@@ -13,7 +13,7 @@ do
 	fi
 	if (( i==8 ))
 	then
-		echo "goo luck"
+		echo "good luck"
 	fi
 	i=$(( i+1 ))
 done
