@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script show holberton school ten times
+i=0
+until (( i >= 10 ))
+	do
+		echo "Holberton School"
+		i=$(( i+1 ))
+	done

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# scrip show wor in diferent event
+i=1
+while (( i<=10 ))
+do
+	if(( i!=4 && i!=8 ))
+	then
+		echo "Holberton School"
+	fi
+	if (( i==4 ))
+	then
+		echo "bad luck"
+	fi
+	if (( i==8 ))
+	then
+		echo "goo luck"
+	fi
+	i=$(( i+1 ))
+done
