@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Script show "Holberton School" ten times
 i=0
-while (( i <= 10 ))
-	do
-		echo "Holberton School"
-		i=$((i+1))
-	done
+while ((i < 10))
+do
+	echo "Holberton School"
+	i=$((i+1))
+done
