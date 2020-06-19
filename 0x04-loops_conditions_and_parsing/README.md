@@ -1,11 +1,11 @@
 # 0x04 l0ops, conditions and parsing
 ## Resources
 ***### Read or watch:
-- Loops sample
-- Variable assignment and arithmetic
-- Comparison operators
-- File test operators
-- Make your scripts portable
+- [Loops sample](https://intranet.hbtn.io/rltoken/fRCmr2B_Ne-rQdFZdfUDcA)
+- [Variable assignment and arithmetic](https://intranet.hbtn.io/rltoken/o8mucWW2XddN4MHiHSArkA)
+- [Comparison operators](https://intranet.hbtn.io/rltoken/jN0bfG-Qpkg3aYJM-n3LHw)
+- [File test operators](https://intranet.hbtn.io/rltoken/mYWUvI1VFqR_KWNWZngq7Q)
+- [Make your scripts portable](https://intranet.hbtn.io/rltoken/Dyrnap2UC-LrzrmCOJRx8A)
 
 ## man or help:
 - env
