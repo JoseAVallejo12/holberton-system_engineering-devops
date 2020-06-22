@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # kill process especific
 proc=$(pgrep -f '4-to_infinity_and_beyond')
 kill "$proc"

@@ -1,3 +1,3 @@
-#!/usr/bin/env	bash
+#!/usr/bin/bash
 # show the PID process active
 echo $$
