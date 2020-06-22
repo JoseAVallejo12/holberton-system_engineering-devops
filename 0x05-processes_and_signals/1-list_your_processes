@@ -1,0 +1,3 @@
+#!/usr/bin/env	bash
+# show all own process
+ps -faux
