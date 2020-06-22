@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# kill process especific forced
+pkill -9 -f 7-highlander
