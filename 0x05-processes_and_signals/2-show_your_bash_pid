@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # show all own proces
 # shellcheck disable=SC2009
-ps -faux | grep 'bash'
+ps -auxf | grep 'bash'
