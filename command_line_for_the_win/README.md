@@ -228,7 +228,7 @@ grep -iRh "500" ./
 Extract all IP addresses from files that start with "access.log" printing one IP address per line.
 ```
 Usage:
-grep -oRPh "[\d.]{11,15}" *
+grep -oRPh "[\d.]{7,15}" *
 
 Other:
 grep -hRi HTTP | cut -f1 -d" "
