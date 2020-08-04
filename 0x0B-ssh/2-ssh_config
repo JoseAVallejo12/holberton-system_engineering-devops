@@ -1,0 +1,9 @@
+Host host_one
+    HostName 35.231.89.82
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/holberton
+
+Host *
+    User root
+    Compression yes
