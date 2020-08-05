@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #scrip for install nginx
 sudo apt-get update
-sudo apt-get install xginx
+sudo apt-get -y install nginx
