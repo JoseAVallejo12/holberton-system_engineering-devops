@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # This script restarts apache2 inside a docker container
-echo "ServerName localhost" >> /etc/apache2.conf
-sudo service apache2 start
+service apache2 start
