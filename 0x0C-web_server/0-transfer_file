@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #Bash script that transfers a file from our client to a server:
+# $1: file to trasnfer, $2: IP server to tranfer file
+# $3: username for log in server remote, $4: path of SSH private key
 if [ "$4" != '' ]
 then
 	scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2":~/
