@@ -2,4 +2,4 @@
 # Config server nginx for run service
 sudo rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+sudo pkill -1 -f "/usr/sbin/nginx"
