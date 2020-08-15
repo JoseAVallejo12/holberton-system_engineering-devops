@@ -5,3 +5,4 @@ path_src='/etc/nginx/sites-available/default'
 path_dst='/etc/nginx/sites-enabled/default'
 sudo rm "$path_dst"
 ln -s "$path_src" "$path_dst"
+service nginx restart
