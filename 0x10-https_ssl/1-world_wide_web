@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Show information about subdomains in servers
+print_domain () {
+    result=$(dig "$1"."$2" | awk '/;; ANSWER SECTION:/{getline; print;}')
+    echo -n "The subdomain $1 is a "
+    record=$(echo "$result" | rev | cut -f2 | rev )
+    echo -n "$record record and points to "
+    echo "$result" | rev | cut -f1 | rev
+    return 0
+
+}
+if [ $# -eq 1 ]
+then
+    domain_array=(www lb-01 web-01 web-02)
+    for i in "${domain_array[@]}"
+    do
+	print_domain "$i" "$1"
+    done
+else
+    print_domain "$2" "$1"
+fi
