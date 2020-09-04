@@ -1,7 +1,7 @@
 # 0x14. MySQL
-<p align="center"><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/280/KkrkDHT.png" width="500px>"</p><br/>
-For this project, students are expected to look at these concepts:
+<p align="center"><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/280/KkrkDHT.png" width="500px>"</p>
 
+For this project, students are expected to look at these concepts:
 - [Database administration](https://intranet.hbtn.io/concepts/49)
 - [Web stack debugging](https://intranet.hbtn.io/concepts/68)
 
