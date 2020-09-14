@@ -9,12 +9,12 @@ This is a perfect example of a task that is not suited for Bash scripting, so le
 ## Resources
 Read or watch:
 
-- Friends don’t let friends program in shell script
-- What is an API
-- What is an API? In English, please
-- What is a REST API
-- What are microservices
-- PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry
+- [Friends don’t let friends program in shell script](https://intranet.hbtn.io/rltoken/6isWaTEpGTrwhzCCG5s_Tw)
+- [What is an API](https://intranet.hbtn.io/rltoken/13UaAZ1pQKQYY7VVwzJwCQ)
+- [What is an API? In English, please](https://intranet.hbtn.io/rltoken/I1nC8rhySGahG3gXYBfDPA)
+- [What is a REST API](https://intranet.hbtn.io/rltoken/0KygelrSeZsIujDu-I2a0w)
+- [What are microservices](https://intranet.hbtn.io/rltoken/lewYS0z2RuFuiIkIgaCHSA)
+- [PEP8 Python style](https://intranet.hbtn.io/rltoken/lEisphllQEYAs5yg26Ng0w) - having a clean code respecting style guide is really appreciated in the industry
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
