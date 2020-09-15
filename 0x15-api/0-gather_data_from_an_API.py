@@ -7,22 +7,20 @@ if __name__ == "__main__":
     from sys import argv
     import requests
 
-    URI_user = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
-    URI_task = 'https://jsonplaceholder.typicode.com/todos'
-    user = requests.get(URI_user).json()
-    tasks = requests.get(URI_task).json()
-    user_task = 0
+    URI_base = 'https://jsonplaceholder.typicode.com'
+    tasks_query = {"userId": 1}
+    user = requests.get(str(URI_base + "/user/" + argv[1])).json()
+    tasks = requests.get(str(URI_base + "/todos"), params=tasks_query)
     user_task_done = []
-    for task in tasks:
-        if str(task.get("userId")) == argv[1]:
-            user_task += 1
-            if (task.get("completed")):
-                user_task_done.append(task.get("title"))
+
+    for task in tasks.json():
+        if (task.get("completed")):
+            user_task_done.append(task.get("title"))
 
     print('Employee {} is done with tasks({}/{}):'.format(
         user.get("name"),
         len(user_task_done),
-        (user_task - len(user_task_done))
+        (len(tasks.json()) - len(user_task_done))
     ))
     for val in user_task_done:
         print("\t ", end="")
