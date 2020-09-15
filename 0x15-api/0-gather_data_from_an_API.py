@@ -26,4 +26,4 @@ if __name__ == "__main__":
         (user_task - len(user_task_done))
     ))
     for val in user_task_done:
-        print("     {}".format(val))
+        print("\t {}\n".format(val), end="")
