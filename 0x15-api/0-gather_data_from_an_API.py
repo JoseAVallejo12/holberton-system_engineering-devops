@@ -6,7 +6,6 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-
     URI_base = 'https://jsonplaceholder.typicode.com'
     tasks_query = {"userId": argv[1]}
     user_query = {"id": argv[1]}
