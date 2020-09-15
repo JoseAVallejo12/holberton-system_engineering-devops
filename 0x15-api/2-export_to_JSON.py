@@ -12,14 +12,14 @@ if __name__ == "__main__":
     user_query = {"id": argv[1]}
     user = requests.get(str(URI_base + "/users/"), params=user_query).json()
     tasks = requests.get(str(URI_base + "/todos"), params=tasks_query).json()
-    user_dict = {argv[1]:[]}
+    user_dict = {argv[1]: []}
 
     with open('{}.json'.format(user[0].get("id")), 'w') as file:
         for task in tasks:
             user_dict.get(argv[1]).append(
                 {
-                "task": task.get("title"),
-                "completed": task.get("completed"),
-                "username": user[0].get("username")
+                    "task": task.get("title"),
+                    "completed": task.get("completed"),
+                    "username": user[0].get("username")
                 })
         file.write(json.dumps(user_dict))
