@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user = requests.get(str(URI_base + "/users/"), params=user_query).json()
     tasks = requests.get(str(URI_base + "/todos"), params=tasks_query).json()
     user_list = []
-    with open('test.csv', 'w') as file:
+    with open('{}.csv'.format(user[0].get("id")), 'w') as file:
         writer = csv.writer(file,
                             quoting=csv.QUOTE_ALL,
                             delimiter=',',
