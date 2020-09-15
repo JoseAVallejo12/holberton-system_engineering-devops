@@ -3,9 +3,9 @@
 returns information about his/her list progress."""
 
 if __name__ == "__main__":
-    import csv
-    from sys import argv
     import requests
+    from sys import argv
+
 
     URI_base = 'https://jsonplaceholder.typicode.com'
     tasks_query = {"userId": argv[1]}
