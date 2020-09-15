@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""
-    Python script that, using this REST API, for a given employee ID,
-    returns information about his/her TODO list progress.
-"""
+"""Python script that, using this REST API, for a given employee ID,
+returns information about his/her TODO list progress."""
+
 if __name__ == "__main__":
     import csv
     from sys import argv
@@ -20,10 +19,11 @@ if __name__ == "__main__":
             if (task.get("completed")):
                 user_task_done.append(task.get("title"))
 
-    print("Employee {} is done with tasks({}/{}):".format(
+    print('Employee {} is done with tasks({}/{}):'.format(
         user.get("name"),
         len(user_task_done),
         (user_task - len(user_task_done))
     ))
     for val in user_task_done:
-        print("\t {}\n".format(val), end="")
+        print("\t ", end="")
+        print('{}'.format(val))
