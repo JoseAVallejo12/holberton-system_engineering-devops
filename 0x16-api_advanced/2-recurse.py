@@ -12,7 +12,7 @@ def recurse(subreddit, hot_list=[]):
     count = data.get("dist")
     idx = 0
 
-    while data.get("after") != None:
+    while data.get("after") is not None:
         params = {"after": data.get("after")}
         data = requests.get(
             uri,
