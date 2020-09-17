@@ -11,10 +11,18 @@ def recurse(subreddit, hot_list=[], params={}):
     headers = {"User-Agent": "holberton"}
     data = requests.get(uri, headers=headers, params=params).json().get("data")
     params = {"after": data.get("after")}
-    hot_list.append(data.get("dist"))
+
+    # fill the host_list
+    children = data.get("children", None)
+    if children:
+        for topic in children:
+            hot_list.append(topic.get("data").get("title"))
+
+    # call to recursive funtion if exits more data
     if data.get("after") is not None:
         recurse(subreddit, hot_list, params)
-    if sum(hot_list) is not 0:
-        return range(0, sum(hot_list))
+
+    if len(hot_list) is not 0:
+        return hot_list
     else:
         return None
