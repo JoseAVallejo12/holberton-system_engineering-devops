@@ -6,6 +6,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[]):
+    """recurse functions"""
     uri = uri = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "holberton"}
     data = requests.get(uri, headers=headers).json().get("data")
