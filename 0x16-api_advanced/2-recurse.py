@@ -10,6 +10,8 @@ def recurse(subreddit, hot_list=[], params={}):
     uri = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "holberton"}
     data = requests.get(uri, headers=headers, params=params).json().get("data")
+    if data is None:
+        return None
     params = {"after": data.get("after")}
 
     # fill the host_list
