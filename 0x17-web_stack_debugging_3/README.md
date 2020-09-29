@@ -46,7 +46,28 @@ root@43a0713fd2d2:~# curl -sI 127.0.0.1                                         
 
 ### list all system call in tty2
 ```
-root@43a0713fd2d2:~# strace -c ls                                                                       % time     seconds  usecs/call     calls    errors syscall                                              ------ ----------- ----------- --------- --------- ----------------                                       0.00    0.000000           0        10           read                                                   0.00    0.000000           0        24         1 open                                                   0.00    0.000000           0        26           close                                                  0.00    0.000000           0        23           fstat                                                  0.00    0.000000           0        35           mmap                                                   0.00    0.000000           0        14           mprotect                                               0.00    0.000000           0         3           munmap                                                 0.00    0.000000           0         3           brk                                                    0.00    0.000000           0         2           ioctl                                                  0.00    0.000000           0         8         8 access                                                 0.00    0.000000           0         1           execve                                                 0.00    0.000000           0         2           getdents                                               0.00    0.000000           0         2         2 statfs                                                 0.00    0.000000           0         1           arch_prctl                                             0.00    0.000000           0         1           openat                                               ------ ----------- ----------- --------- --------- ----------------                                     100.00    0.000000                   155        11 total                                                root@43a0713fd2d2:~#   
+root@43a0713fd2d2:~# strace -c ls
+                                                                     
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+0.00    0.000000           0        10           read                                                   
+0.00    0.000000           0        24         1 open                                                   
+0.00    0.000000           0        26           close                                                  
+0.00    0.000000           0        23           fstat                                                  
+0.00    0.000000           0        35           mmap                                                   
+0.00    0.000000           0        14           mprotect                                               
+0.00    0.000000           0         3           munmap                                                
+0.00    0.000000           0         3           brk                                                    
+0.00    0.000000           0         2           ioctl                                                  
+0.00    0.000000           0         8         8 access                                                 
+0.00    0.000000           0         1           execve                                                 
+0.00    0.000000           0         2           getdents                                               
+0.00    0.000000           0         2         2 statfs                                                 
+0.00    0.000000           0         1           arch_prctl                                             
+0.00    0.000000           0         1           openat                                               
+------ ----------- ----------- --------- --------- ----------------                                     
+100.00    0.000000                   155        11 total                                                
+root@43a0713fd2d2:~#   
 ```
 ### find error in systemcall open that have one error in tty1
 ```
