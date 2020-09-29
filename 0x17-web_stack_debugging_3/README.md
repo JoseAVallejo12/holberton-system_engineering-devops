@@ -32,16 +32,35 @@ $ gem install puppet-lint -v 2.1.1
 ## **command used for fix**
 ### show all proccess running
 ```
-root@43a0713fd2d2:~# ps -auxf                                                                           USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND                                root         1  0.0  0.0  17956  2880 ?        Ss   18:04   0:00 /bin/bash ./tmp/run.sh                 root        15  0.0  0.1  61380  5352 ?        S    18:04   0:00 /usr/sbin/sshd -D                      root       585  0.0  0.1  66012  5632 ?        Ss   18:04   0:00  \_ sshd: root@pts/0                   root       587  0.0  0.0  19920  3632 pts/0    Ss   18:04   0:00      \_ -bash                          root       598  0.0  0.0  17248  2456 pts/0    R+   18:04   0:00          \_ ps -auxf                   root        66  0.0  0.5 276396 21460 ?        Ss   18:04   0:00 /usr/sbin/apache2 -k start             www-data    95  0.0  0.1 276420  7432 ?        S    18:04   0:00  \_ /usr/sbin/apache2 -k start         root        70  0.0  0.0   4444  1624 ?        S    18:04   0:00 /bin/sh /usr/bin/mysqld_safe           mysql      418  0.6  1.6 574652 66892 ?        Sl   18:04   0:00  \_ /usr/sbin/mysqld --basedir=/usr --droot@43a0713fd2d2:~#   
+root@43a0713fd2d2:~# ps -auxf                                                                           
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  17956  2880 ?        Ss   18:04   0:00 /bin/bash ./tmp/run.sh
+root        15  0.0  0.1  61380  5352 ?        S    18:04   0:00 /usr/sbin/sshd -D
+root       585  0.0  0.1  66012  5632 ?        Ss   18:04   0:00  \_ sshd: root@pts/0
+root       587  0.0  0.0  19920  3632 pts/0    Ss   18:04   0:00      \_ -bash
+root       598  0.0  0.0  17248  2456 pts/0    R+   18:04   0:00          \_ ps -auxf
+root        66  0.0  0.5 276396 21460 ?        Ss   18:04   0:00 /usr/sbin/apache2 -k start
+www-data    95  0.0  0.1 276420  7432 ?        S    18:04   0:00  \_ /usr/sbin/apache2 -k start
+root        70  0.0  0.0   4444  1624 ?        S    18:04   0:00 /bin/sh /usr/bin/mysqld_safe
+mysql      418  0.6  1.6 574652 66892 ?        Sl   18:04   0:00  \_ /usr/sbin/mysqld --basedir=/usr --droot@43a0713fd2d2:~#
 ```
 ### Attach process by PID
 ```
-root@43a0713fd2d2:~# strace -p 95                                                                       Process 70 attached                                                                                     wait4(-1,  
+root@43a0713fd2d2:~# strace -p 95
+Process 70 attached
+wait4(-1,
 ```
 
 ### in other terminal(tty2) run curl -sI 127.0.0.1:80
 ```
-root@43a0713fd2d2:~# curl -sI 127.0.0.1                                                                 HTTP/1.0 500 Internal Server Error                                                                      Date: Tue, 29 Sep 2020 18:09:43 GMT                                                                     Server: Apache/2.4.7 (Ubuntu)                                                                           X-Powered-By: PHP/5.5.9-1ubuntu4.21                                                                     Connection: close                                                                                       Content-Type: text/html                                                                                                        root@43a0713fd2d2:~#  
+root@43a0713fd2d2:~# curl -sI 127.0.0.1
+HTTP/1.0 500 Internal Server Error
+Date: Tue, 29 Sep 2020 18:09:43 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.21
+Connection: close
+Content-Type: text/html
+root@43a0713fd2d2:~#
 ```
 
 ### list all system call in tty2
@@ -97,7 +116,9 @@ vim /var/www/html/wp-settings.php
 ~
 ~
 134 
-135 // Load the L10n library.                                                                                                                                                                          136 require_once( ABSPATH . WPINC . '/l10n.php' );
+135 // Load the L10n
+library.
+136 require_once( ABSPATH . WPINC . '/l10n.php' );
 137 require_once( ABSPATH . WPINC . '/class-wp-locale.phpp' );
 138 require_once( ABSPATH . WPINC . '/class-wp-locale-switcher.php' );                                                                                                                                          139                                                                      
 ```
