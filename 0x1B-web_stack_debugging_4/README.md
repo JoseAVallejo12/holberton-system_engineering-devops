@@ -66,3 +66,16 @@ Notice: Finished catalog run in 1.10 seconds
 ```
 ## Test finsh
 ```
+Server Software:		nginx/1.4.6
+Server Hostname:		localhost
+Concurrency Level:      100
+Time taken for tests:   0.171 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      1706000 bytes
+HTML transferred:       1224000 bytes
+Requests per second:    11681.63 [#/sec] (mean)
+Time per request:       8.560 [ms] (mean)
+Time per request:       0.086 [ms] (mean, across all concurrent requests)
+Transfer rate:          9730.89 [Kbytes/sec] received
+```                                                                                                                                                              ```
